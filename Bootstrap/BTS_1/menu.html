@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	li a:hover{
+	background-color:#00ffff;
+	}
+	.pagination {
+		display: inline-block;
+	}
+	.pagination a {
+	  color: black;
+	  float: left;
+	  margin: 100px;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	}
+	
+	.mySlides {display:none;}
+	body{
+	background-color:#e0ffff;
+	}
+</style>
+<body>
+		
+	<div class="jumbotron text-center col-sm-12">
+		<h1>Azienda Aerospaziale</h1>
+	</div>
+	
+		<div class="col-sm-12">
+		<ul class="nav nav-pills">
+			<li class="nav-item  ">
+				<a class="nav-link" href="menu2.html" target="ciao">chi siamo</a>
+			</li>
+			
+			<li class="nav-item">
+				<a class="nav-link " href="creatori.html" target="ciao">creatori</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="progetti.html" target="ciao">progetti</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="missioni.html" target="ciao">mete future</a>
+			</li>
+			
+		</div>
+		<div class="w3-content w3-section col-sm-6" style="max-width:500px ; float:left">
+			<img class="mySlides" src="img1.png" style="width:100%">
+			<img class="mySlides" src="vv.png" style="width:100%">
+			<img class="mySlides" src="img2.jpg" style="width:100%">
+			<img class="mySlides" src="ccc.jpg" style="width:100%">
+			
+			
+		</div>
+		<p></p>
+		
+		<div  class ="container col-sm-6" style= "float:left">
+			<iframe name="ciao"height="730" width="780"style= "float:left;background-color:#e0ffff"> </iframe>
+		</div>
+		
+
+	
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+		
+			 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">scopri dove siamo!</button>
+	  <div id="demo" class="collapse">
+		<a href="#">News <span class="badge">5</span></a><br>
+		<a href="https://www.google.com/maps/place/Centro+Commerciale+Brianza/@45.5745545,9.1799811,15z/data=!4m5!3m4!1s0x0:0x9279604ad7936b0b!8m2!3d45.5745545!4d9.1799811"target ="_blank">
+		<img src="maps.jpg" style="width:10%; float:right">
+		</a>
+	  </div>
+		
+		<div class="pagination">
+	 
+	  <a href="menu2.html"target="ciao">1</a>
+	  <a href="creatori.html" target="ciao">2</a>
+	  <a href="progetti.html"target="ciao">3</a>
+	  <a href="missioni.html"target="ciao">4</a>
+	 
+	</div>
+	
+
+
+</body>
+</html>
